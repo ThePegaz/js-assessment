@@ -1,60 +1,83 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.arraysAnswers = {
+  indexOf: function (arr, item) {
+    var index = -1;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        index = i;
+      }
+    }
+    return index;
+  },
 
-  indexOf : function(arr, item) {
+  sum: function (arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum;
+  },
+
+  remove: function (arr, item) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        arr.splice(i, 1);
+      }
+    }
+    return arr;
+  },
+
+  removeWithoutCopy: function (arr, item) {
+    var i, len;
+
+    for(i = 0, len = arr.length; i < len; i++) {
+      if(arr[i] === item) {
+        arr.splice(i, 1);
+        i = i - 1;
+        len = len - 1;
+      }
+    }
+    return arr;
+  },
+
+  append: function (arr, item) {
 
   },
 
-  sum : function(arr) {
+  truncate: function (arr) {
 
   },
 
-  remove : function(arr, item) {
+  prepend: function (arr, item) {
 
   },
 
-  removeWithoutCopy : function(arr, item) {
+  curtail: function (arr) {
 
   },
 
-  append : function(arr, item) {
+  concat: function (arr1, arr2) {
 
   },
 
-  truncate : function(arr) {
+  insert: function (arr, item, index) {
 
   },
 
-  prepend : function(arr, item) {
+  count: function (arr, item) {
 
   },
 
-  curtail : function(arr) {
+  duplicates: function (arr) {
 
   },
 
-  concat : function(arr1, arr2) {
+  square: function (arr) {
 
   },
 
-  insert : function(arr, item, index) {
-
-  },
-
-  count : function(arr, item) {
-
-  },
-
-  duplicates : function(arr) {
-
-  },
-
-  square : function(arr) {
-
-  },
-
-  findAllOccurrences : function(arr, target) {
+  findAllOccurrences: function (arr, target) {
 
   }
 };
