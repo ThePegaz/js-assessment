@@ -21,7 +21,11 @@
   "undef": true,
   "sub": true,
   "strict": false,
-  "quotmark": "single",
+  "quotmark": "true",
+  "globals": {
+    "jQuery": true,
+    "$": true
+  },
 
   "predef": [
     "describe",
